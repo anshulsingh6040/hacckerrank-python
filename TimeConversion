@@ -1,0 +1,12 @@
+def timeconversion(s):
+    time = s[:-2].split(':') 
+    note = s[-2:]
+    
+    if (note == 'PM') and (time[0]!='12'):
+        time[0]=str(int(time[0])+12)
+        
+    elif (note == 'AM') and (time[0]=='12'):
+        time[0]='00'
+        
+    _24hourtime = ':'.join(time)
+    return _24hourtime
