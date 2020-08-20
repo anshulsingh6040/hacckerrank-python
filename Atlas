@@ -1,0 +1,75 @@
+import os
+from pyttsx3 import speak
+from datetime import datetime
+name = input('Enter your name :')
+speak('Hello,'+name+' this is Atlas. How can i assist you?')
+while True:
+    x = input()
+    if (('time' in x) or ('clock' in x)):
+        speak(datetime.today().strftime('%H hours and %M minutes'))
+    elif (('name' in x) or ('who am i' in x)):
+        speak('You are'+name)
+    elif ('date') in x:
+        speak(datetime.today().strftime('Today is %B %dth %Y'))
+    elif (('day' in x) or ('weekday' in x)):
+        speak(datetime.today().strftime('Today is %A'))
+    elif (('year' in x) or ('Year' in x) or ('Yr' in x) or ('yr' in x)):
+        speak(datetime.today().strftime('The year is %Y'))
+    elif ('month') in x:
+        speak(datetime.today().strftime('The current month is %B'))
+    elif (('notepad' in x) or ('editor' in x) or ('text' in x) or ('txt' in x) or ('note' in x) or ('Note' in x)):
+        speak('Do you want to name your file? Press Enter if No.')
+        file = input('Enter file name: ')
+        os.system('notepad'+' '+file)
+    elif (('chrome' in x) or ('browser' in x) or ('google' in x) or ('surfing' in x)):
+        speak('Which website do you want me to search??')
+        website = input('Enter wesbite: ')
+        os.system('chrome'+' '+website+'.com')
+    elif (('videos' in x) or ('mp4' in x) or ('youtube' in x)):
+        speak('Here is what i have found.')
+        os.system('start chrome youtube.com')
+    elif (('scrolling' in x) or ('insta' in x) or ('gram' in x) or ('instagram' in x) or ('ig' in x) or ('IG' in x)):
+        os.system('start chrome instagram.com')
+    elif (('mail' in x) or ('gmail' in x)):
+        os.system('start chrome gmail.com')
+    elif (('whatsapp' in x) or ('Whatsapp' in x) or ('chatting' in x) or ('messages' in x)):
+        os.system('chrome web.whatsapp.com')
+    elif (('photoshop' in x) or ('PS' in x) or ('ps' in x) or ('photo' in x) or ('photo editor') in x or ('editing' in x)):
+        os.system('start photoshop')
+    elif (('wmplayer' in x) or ('music' in x) or ('player' in x) or ('media' in x) or ('party' in x)):
+        os.system('start wmplayer')
+    elif (('control panel' in x) or ('control' in x) or ('panel' in x)):
+        os.system('start control panel')
+    elif (('vlc' in x) or ('VLC' in x) ): 
+        os.system('start vlc')
+    elif (('paint' in x) or ('Paint' in x) or ('drawing' in x) or ('draw' in x)):
+        speak('i never knew you like drawing')
+        os.system('start mspaint')
+    elif (('pdf' in x) or ('reader' in x) or ('acrobat reader' in x) or ('pdf reader' in x) or ('Pdf' in x) or ('read' in x)):
+        os.system('acrord32')
+    elif (('cal' in x) or ('calculator' in x) or ('calc' in x) or ('maths' in x) or ('calculations' in x)or ('mathematics' in x)):
+        speak('Well, not to show off, but i was really good in mathematics in my high school')
+        os.system('calc')
+    elif (('msword' in x) or ('word' in x) or ('doc' in x) or ('document' in x)):
+        os.system('start winword')
+    elif (('msoutlook' in x) or ('Outlook' in x) or ('outlook' in x)):
+        os.system('start outlook')
+    elif (('ppt' in x) or ('presentation' in x) or ('slides' in x) or ('powerpoint' in x)):
+        os.system('start powerpnt')
+    elif (('Access' in x) or ('msaccess' in x) or ('access' in x)):
+        os.system('start msaccess')
+    elif (('excel' in x) or ('datbase' in x) or ('spreadsheet' in x) or ('spreadsheets' in x) or ('msexcel' in x)):
+        os.system('start excel')
+    elif (('onenote' in x) or ('Onenote' in x) or ('msonenote' in x) or ('Msonenote' in x)):
+        os.system('start onenote')
+    elif (('msgroove' in x) or ('groove' in x) or ('Msgroove' in x)):
+        os.system('start groove')
+    elif (('infopath' in x) or ('msinfopath' in x)):
+        os.system('start infopath')
+    elif (('snip' in x) or ('snippingtool' in x) or ('Snip' in x)):
+        os.system('start snippingtool')
+    elif (('exit' in x) or ('bye' in x) or ('see you' in x) or ('toodles' in x) or ('quit' in x)):
+        speak('See you tomorrow'+' '+name+'have a nice day ahead')
+        break
+    else:
+        speak("i don't understand what are you asking me to do.")
